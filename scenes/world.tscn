@@ -23,7 +23,7 @@ default_font_size = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_4mrxx"]
 font_size = 41
-font_color = Color(0.8, 0.8, 0.8, 0.3137255)
+font_color = Color(0.8, 0.8, 0.8, 0.313726)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r4gi"]
 texture = ExtResource("1_rwgxs")
@@ -407,9 +407,9 @@ texture = ExtResource("2_4wyf3")
 14:8/0 = 0
 15:8/0 = 0
 18:8/0 = 0
-18:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 0.08992958, 8, 8, -8, 8)
+18:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 0.0899296, 8, 8, -8, 8)
 19:8/0 = 0
-19:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.3489408, 8, -8, 8, 8, -8, 8)
+19:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.34894, 8, -8, 8, 8, -8, 8)
 20:8/0 = 0
 20:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:8/0 = 0
@@ -427,11 +427,11 @@ texture = ExtResource("2_4wyf3")
 14:9/0 = 0
 15:9/0 = 0
 16:9/0 = 0
-16:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -0.2697878, 8, 8, -8, 8)
+16:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -0.269788, 8, 8, -8, 8)
 17:9/0 = 0
 17:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -8, 8, 8, -8, 8)
 18:9/0 = 0
-18:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.8093643, -8, 8, -8, 8, 8, -8, 8)
+18:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.809364, -8, 8, -8, 8, 8, -8, 8)
 19:9/0 = 0
 19:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:9/0 = 0
@@ -949,6 +949,7 @@ label_settings = SubResource("LabelSettings_4mrxx")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("8_4mrxx")
+metadata/_edit_use_anchors_ = true
 
 [node name="BackBlocks" type="TileMapLayer" parent="."]
 position = Vector2(0, 22)

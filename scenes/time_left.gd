@@ -1,6 +1,6 @@
 extends Label
 
-var time = 5
+var time = 120
 
 
 
