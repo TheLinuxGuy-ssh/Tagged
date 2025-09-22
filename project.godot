@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Tagged"
-run/main_scene="uid://bxsjtinb4ab8w"
+run/main_scene="uid://2jccqg1n568o"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://scenes/global.gd"
+
+[display]
+
+window/size/mode=3
 
 [global_group]
 
@@ -61,5 +65,6 @@ jump_2={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
