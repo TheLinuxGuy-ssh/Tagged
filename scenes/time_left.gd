@@ -1,6 +1,6 @@
 extends Label
 
-var time = 120
+var time = 5
 
 
 
@@ -9,6 +9,6 @@ func _process(delta):
 		time -= delta
 		text = str(int(time))
 	else:
-		get_tree().paused = true
+		get_tree().change_scene_to_file("res://scenes/results.tscn")
 		
 		

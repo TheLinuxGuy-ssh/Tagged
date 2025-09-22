@@ -6,12 +6,12 @@
 [ext_resource type="FontFile" uid="uid://dkiddafwlmebn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_v86rl"]
 [ext_resource type="FontFile" uid="uid://b4n34sa0p2f0o" path="res://assets/fonts/PixelOperator8.ttf" id="5_13sgg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_con2f"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ytvr"]
 texture = ExtResource("2_vjb58")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_mhnvy"]
-sources/0 = SubResource("TileSetAtlasSource_con2f")
+sources/0 = SubResource("TileSetAtlasSource_4ytvr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6lef"]
 texture = ExtResource("3_g3eks")

@@ -55,6 +55,7 @@ func _on_area_2d_area_entered(area):
 		if den:
 			den = false
 			denicon.visible = false
+			Global.winner = "Player 1"
 		else:
 			den = true
 			denicon.visible = true

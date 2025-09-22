@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://dybm4fcp0q7hs"]
+[gd_scene load_steps=13 format=4 uid="uid://dybm4fcp0q7hs"]
 
 [ext_resource type="Script" uid="uid://bwligi2l1aee7" path="res://scenes/results.gd" id="1_s58my"]
 [ext_resource type="Texture2D" uid="uid://qqatx5gunmox" path="res://assets/sprites/backframe.png" id="2_w6ibn"]
 [ext_resource type="Texture2D" uid="uid://bj7ssigow7pyw" path="res://assets/sprites/sheet.png" id="3_ph3j5"]
 [ext_resource type="FontFile" uid="uid://b4n34sa0p2f0o" path="res://assets/fonts/PixelOperator8.ttf" id="4_2q2pa"]
+[ext_resource type="FontFile" uid="uid://dkiddafwlmebn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_w6ibn"]
+[ext_resource type="Script" uid="uid://bdguf6x7w2o71" path="res://scenes/wins.gd" id="6_ph3j5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujvko"]
 texture = ExtResource("2_w6ibn")
@@ -126,6 +128,8 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 corner_detail = 20
 
+[sub_resource type="Theme" id="Theme_ph3j5"]
+
 [node name="ResultScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -176,6 +180,40 @@ theme_override_fonts/font = ExtResource("4_2q2pa")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_00fns")
 text = "Main Menu"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 240.0
+offset_right = 721.0
+offset_bottom = 288.0
+theme = SubResource("Theme_ph3j5")
+theme_override_fonts/font = ExtResource("5_w6ibn")
+theme_override_font_sizes/font_size = 36
+text = "Wins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Winner" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -194.0
+offset_right = 249.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ph3j5")
+theme_override_fonts/font = ExtResource("5_w6ibn")
+theme_override_font_sizes/font_size = 48
+text = "Player"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_ph3j5")
 
 [connection signal="pressed" from="VBoxContainer/PlayAgain" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

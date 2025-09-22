@@ -25,7 +25,7 @@ default_font_size = 20
 font_size = 41
 font_color = Color(0.8, 0.8, 0.8, 0.3137255)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0juu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r4gi"]
 texture = ExtResource("1_rwgxs")
 0:0/0 = 0
 1:0/0 = 0
@@ -132,7 +132,7 @@ texture = ExtResource("1_rwgxs")
 6:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_71j4m"]
-sources/0 = SubResource("TileSetAtlasSource_k0juu")
+sources/0 = SubResource("TileSetAtlasSource_7r4gi")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wyf3"]
 texture = ExtResource("1_rwgxs")
