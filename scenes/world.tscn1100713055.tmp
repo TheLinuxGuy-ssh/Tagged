@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bxsjtinb4ab8w"]
+[gd_scene load_steps=24 format=4 uid="uid://bxsjtinb4ab8w"]
 
 [ext_resource type="Script" uid="uid://d1o8wx84afcm3" path="res://assets/scripts/world.gd" id="1_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://qqatx5gunmox" path="res://assets/sprites/backframe.png" id="1_71j4m"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cilejl31g1r7k" path="res://assets/sprites/world_tileset.png" id="4_qfnet"]
 [ext_resource type="FontFile" uid="uid://b4n34sa0p2f0o" path="res://assets/fonts/PixelOperator8.ttf" id="7_i7141"]
 [ext_resource type="Script" uid="uid://dvb0p4sf7v28j" path="res://assets/scripts/time_left.gd" id="8_4mrxx"]
-[ext_resource type="AudioStream" uid="uid://w3pp4misxs5u" path="res://assets/music/den.mp3" id="10_w7kh3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
 texture = ExtResource("1_71j4m")
@@ -955,7 +954,6 @@ script = ExtResource("8_4mrxx")
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="TimeLeft"]
-autostart = true
 
 [node name="BackBlocks" type="TileMapLayer" parent="."]
 position = Vector2(0, 22)
@@ -983,14 +981,8 @@ position = Vector2(0, 22)
 tile_map_data = PackedByteArray("AAABAAYAAAAOAAYAAAAPAAYAAAAOAAUAAAALAAYAAAAPAAYAAAD1/wYAAQACAAYAAADv/wEAAAAAAAEAAADx////AQAFAAUAAADx//7/AQAFAAMAAAAPAPv/AQAAAAUAAAAPAPr/AQAAAAMAAAD9/wEAAQAAAAMAAAD9/wIAAQAAAAUAAAAFAP7/AQAFAAUAAAAFAP3/AQAFAAMAAAD8/wIAAQABAAUAAAAQAPv/AQABAAQAAAD3//v/AQAGAAUAAAD3//r/AQAGAAMAAAADAPf/AQABAAMAAADw////AQAFAAYAAAD4//v/AQAGAAgAAAD2//v/AQAGAAgAAAD1/wQAAQACAAQAAAD1/wUAAQACAAUAAAD2/wQAAQADAAQAAAD2/wUAAQADAAUAAAD2/wYAAQADAAYAAAD3/wQAAQAEAAQAAAD3/wUAAQAEAAUAAAD3/wYAAQAEAAYAAADy////AQAEAAgAAAA=")
 tile_set = SubResource("TileSet_4wyf3")
 
-[node name="DenAudio" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(-238, 86)
-stream = ExtResource("10_w7kh3")
-volume_db = 5.0
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 8)
 zoom = Vector2(2, 2)
 
-[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="timeout" from="TimeLeft/Timer" to="TimeLeft" method="_on_timer_timeout"]

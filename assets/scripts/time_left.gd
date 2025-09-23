@@ -1,14 +1,13 @@
 extends Label
 
-var time = 120
-
-
+var time = Global.time
 
 func _process(delta):
-	if time>0.0:
-		time -= delta
+	pass
+
+func _on_timer_timeout():
+	if time > 0:
+		time -= 1
 		text = str(int(time))
-	else:
+	else: 
 		get_tree().change_scene_to_file("res://scenes/results.tscn")
-		
-		

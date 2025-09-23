@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://dsfuva76ahgwt"]
+[gd_scene load_steps=18 format=3 uid="uid://dsfuva76ahgwt"]
 
-[ext_resource type="Script" uid="uid://cne0kp6ibqmm0" path="res://scenes/character_body_2d_2.gd" id="1_c08b3"]
+[ext_resource type="Script" uid="uid://bukdusjqwity3" path="res://assets/scripts/character_physics.gd" id="1_n07mw"]
 [ext_resource type="Texture2D" uid="uid://baoh4kfu5hb4k" path="res://assets/sprites/characters.png" id="2_agjl5"]
 [ext_resource type="Texture2D" uid="uid://cabvrjanqs1rv" path="res://assets/sprites/den.png" id="3_agjl5"]
 [ext_resource type="AudioStream" uid="uid://mjlat8rcqb03" path="res://assets/music/jump_01.wav" id="4_dj65e"]
+[ext_resource type="Script" uid="uid://c42g0ioc68wi" path="res://assets/players/den_2.gd" id="4_hpn4p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c08b3"]
 atlas = ExtResource("2_agjl5")
@@ -73,7 +74,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
-radius = 10.049875
+radius = 10.0499
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c08b3"]
 radius = 12.0
@@ -86,30 +87,31 @@ texture = ExtResource("3_agjl5")
 [sub_resource type="TileSet" id="TileSet_c08b3"]
 sources/1 = SubResource("TileSetAtlasSource_agjl5")
 
-[node name="Player 2" type="Node2D"]
+[node name="2" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_c08b3")
+script = ExtResource("1_n07mw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 animation = &"Move"
-frame_progress = 0.042202167
+frame_progress = 0.0422022
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_fjrip")
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D" groups=["Player"]]
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" groups=["P2"]]
 position = Vector2(0, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
 position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_c08b3")
 
-[node name="Den" type="TileMapLayer" parent="CharacterBody2D"]
+[node name="Den_P2" type="TileMapLayer" parent="CharacterBody2D"]
 tile_map_data = PackedByteArray(0, 0, 255, 255, 254, 255, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 1, 0, 1, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_c08b3")
+script = ExtResource("4_hpn4p")
 
 [node name="Audio" type="AudioStreamPlayer" parent="CharacterBody2D"]
 stream = ExtResource("4_dj65e")

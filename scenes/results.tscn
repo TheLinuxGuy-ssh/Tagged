@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=4 uid="uid://dybm4fcp0q7hs"]
 
-[ext_resource type="Script" uid="uid://bwligi2l1aee7" path="res://scenes/results.gd" id="1_s58my"]
+[ext_resource type="Script" uid="uid://bwligi2l1aee7" path="res://assets/scripts/results.gd" id="1_s58my"]
 [ext_resource type="Texture2D" uid="uid://qqatx5gunmox" path="res://assets/sprites/backframe.png" id="2_w6ibn"]
 [ext_resource type="Texture2D" uid="uid://bj7ssigow7pyw" path="res://assets/sprites/sheet.png" id="3_ph3j5"]
 [ext_resource type="FontFile" uid="uid://b4n34sa0p2f0o" path="res://assets/fonts/PixelOperator8.ttf" id="4_2q2pa"]
 [ext_resource type="FontFile" uid="uid://dkiddafwlmebn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_w6ibn"]
-[ext_resource type="Script" uid="uid://bdguf6x7w2o71" path="res://scenes/wins.gd" id="6_ph3j5"]
+[ext_resource type="Script" uid="uid://bdguf6x7w2o71" path="res://assets/scripts/wins.gd" id="6_ph3j5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujvko"]
 texture = ExtResource("2_w6ibn")
