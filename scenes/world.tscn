@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bxsjtinb4ab8w"]
+[gd_scene load_steps=26 format=4 uid="uid://bxsjtinb4ab8w"]
 
 [ext_resource type="Script" uid="uid://d1o8wx84afcm3" path="res://assets/scripts/world.gd" id="1_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://qqatx5gunmox" path="res://assets/sprites/backframe.png" id="1_71j4m"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://b4n34sa0p2f0o" path="res://assets/fonts/PixelOperator8.ttf" id="7_i7141"]
 [ext_resource type="Script" uid="uid://dvb0p4sf7v28j" path="res://assets/scripts/time_left.gd" id="8_4mrxx"]
 [ext_resource type="AudioStream" uid="uid://w3pp4misxs5u" path="res://assets/music/den.mp3" id="10_w7kh3"]
+[ext_resource type="AudioStream" uid="uid://cvjvydsojq6x" path="res://assets/music/world_bg.mp3" id="11_e3hyu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
 texture = ExtResource("1_71j4m")
@@ -987,6 +988,11 @@ tile_set = SubResource("TileSet_4wyf3")
 position = Vector2(-238, 86)
 stream = ExtResource("10_w7kh3")
 volume_db = 5.0
+
+[node name="BgMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_e3hyu")
+volume_db = -10.0
+autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 8)
