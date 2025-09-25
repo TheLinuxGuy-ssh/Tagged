@@ -139,6 +139,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.72
 script = ExtResource("1_4ytvr")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
